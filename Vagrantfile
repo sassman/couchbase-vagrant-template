@@ -18,7 +18,7 @@ Vagrant.configure("2") do |config|
 
   # Download the initial box from this url
   config.vm.box = "ubuntu-server-1204-x64-vbox4210"
-  # config.vm.box_url = "http://files.vagrantup.com/precise64.box"
+  config.vm.box_url = "http://puppet-vagrant-boxes.puppetlabs.com/ubuntu-server-12042-x64-vbox4210.box"
 
   # Provision Config for each of the nodes
   1.upto(numNodes) do |num|
