@@ -13,6 +13,7 @@ to configure the couchbase cluster on the first node please go to
 
 
 ::
+
     http://localhost:8001/
 
 and configure the master node.
