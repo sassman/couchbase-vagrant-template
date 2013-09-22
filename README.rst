@@ -6,6 +6,19 @@ this small template allows you to launch easily a couchbase cluster, for experim
 It launchs per default 4 nodes that act as a cluster. Each node has 1024MB ram configured.
 
 
+How to Start
+------------
+
+to configure the couchbase cluster on the first node please go to 
+
+
+::
+    http://localhost:8001/
+
+and configure the master node.
+all other machines are readable by incrementing the portnumber.
+
+
 References
 ----------
 
