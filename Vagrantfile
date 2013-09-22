@@ -26,7 +26,11 @@ Vagrant.configure("2") do |config|
     nodeName = ("node" + num.to_s).to_sym
     config.vm.define nodeName do |node|
       node.vm.box = "ubuntu-server-1204-x64-vbox4210"
+
       node.vm.network :private_network, ip: ipAddrPrefix + num.to_s
+      node.vm.network :forwarded_port, guest: 8091, host: 8000 + num, auto_correct: true
+      node.vm.network :forwarded_port, guest: 80, host: 9000 + num, auto_correct: true
+
       node.vm.provider "virtualbox" do |v|
         v.name = "Couchbase Server Node " + num.to_s
       end
